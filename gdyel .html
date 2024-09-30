@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Donations</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"> <!-- إضافة خط Merriweather -->
+    <style>
+        body {
+            font-family: 'Merriweather', serif; /* تطبيق خط Merriweather */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            height: 60vh;
+            background-image: url('https://www.fse.ulaval.ca/fichiers/agenda/PIXABAY-library-1147815_1920__20240115085250.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        header h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            font-size: 3em;
+            padding-top: 50px;
+        }
+
+        header p {
+            position: relative;
+            z-index: 1;
+            font-size: 1.5em;
+            margin-top: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .about {
+            position: relative; 
+            background-image: url('https://images.unsplash.com/photo-1591710110747-dfeae9fa762a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            padding: 40px; 
+            border-radius: 8px;
+        }
+
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            margin-top: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(0, 0, 0, 0.6); /* خلفية للنص */
+            padding: 20px; /* مسافة داخلية */
+            border-radius: 5px; /* زوايا دائرية */
+        }
+
+        .donation {
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .donation h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .donation p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .donation button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .testimonials {
+            background-image: url('https://images.unsplash.com/photo-1543193158-07c01963e800?q=80&w=865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            padding: 40px;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .testimonials h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .testimonials p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .events {
+            background-image: url('https://images.unsplash.com/photo-1573497019406-c5471c1e0d63?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* إضافة خلفية */
+            background-size: cover;
+            padding: 40px;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.5); /* إضافية لضمان وضوح النص */
+        }
+
+        .events h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .events p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .contact h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .subscribe input {
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+            display: block;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .subscribe button {
+            padding: 10px 20px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Make a Difference Today</h1>
+    <p>Your donation can change a student's life. Help us provide resources and support to those in need.</p>
+</header>
+
+<section class="about">
+    <h2>About Me</h2>
+    <p>This initiative was born out of a desire to make a meaningful impact in the lives of students facing challenges. Our goal is to provide essential resources that empower them to achieve their educational aspirations. Through community support and active engagement, we strive to foster an environment where every student can thrive.</p>
+</section>
+
+<section class="donation">
+    <h2>Help Our Cause</h2>
+    <p>Your support and contributions will help us meet our goals and fund our mission. By donating, you become a crucial part of our efforts to create opportunities for students in need. Every contribution, big or small, makes a difference in their journey.</p>
+    <button onclick="donate()">DONATE NOW</button>
+</section>
+
+<section class="testimonials">
+    <h2>Testimonials</h2>
+    <p>"I received help when I needed it the most. Thank you for your support!" - Jane Doe</p>
+    <p>"Your donations made a difference in our community. We appreciate it!" - John Smith</p>
+</section>
+
+<section class="events">
+    <h2>Upcoming Events</h2>
+    <p>Join us in our upcoming events where we raise awareness and funds to support students. These events are not just about fundraising; they are about building community and creating connections that can lead to lasting change.</p>
+</section>
+
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to get involved? Feel free to reach out to us! We welcome your inquiries and support in making a difference. Together, we can change lives.</p>
+    <p>Email: <a href="mailto:studentsdonations@gmail.com">studentsdonations@gmail.com</a></p>
+    <button style="padding: 10px 20px; font-size: 1.1em; background-color: black; color: white; border: none; cursor: pointer;">
+        SEND US AN EMAIL!
+    </button>
+</section>
+
+<footer>
+    <p>&copy; 2024 Students Donations. All rights reserved.</p>
+</footer>
+
+<script>
+    function donate() {
+        window.location.href = "https://www.paypal.com/donate/?hosted_button_id=KX83NQPV2XP5U";
+    }
+</script>
+
+</body>
+</html>
